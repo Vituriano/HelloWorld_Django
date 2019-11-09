@@ -1,0 +1,32 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" type="text/css" href="{% static 'css/home.css' %}" />
+  <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+  <title>Perfil</title>
+</head>
+
+<body>
+  <div class="perfil">
+    <div class="box">
+      <img class="img-perfil" src="{% static 'img/perfil.jpg' %}" alt="Foto do Vituriano">
+      <h1>Vituriano Xisto</h1>
+      <p class="bio">Sou um Estudante da área de computação, tenho 19 anos e sou natural de Rondônia. Gosto de aprender
+        coisas novas e
+        fiz essa página para aprender mais sobre HTML e CSS.</p>
+      <ul>
+        <h2>Lista de coisas que eu gosto bastante</h2>
+        {% for Gosto in Gostos %}
+        <p>{{Gosto.gosto}}</p>
+        {% endfor %}
+      </ul>
+    </div>
+  </div>
+</body>
+
+</html>
