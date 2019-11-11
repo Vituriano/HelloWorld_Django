@@ -16,9 +16,11 @@
     <div class="box">
       <img class="img-perfil" src="{% static 'img/perfil.jpg' %}" alt="Foto do Vituriano">
       <h1>Vituriano Xisto</h1>
-      <p class="bio">Sou um Estudante da área de computação, tenho 19 anos e sou natural de Rondônia. Gosto de aprender
+      {% for bio in Bio %}
+      <p  class="bio">{{bio.Bio}}</p>
+      {% endfor %}      <!-- Sou um Estudante da área de computação, tenho 19 anos e sou natural de Rondônia. Gosto de aprender
         coisas novas e
-        fiz essa página para aprender mais sobre HTML e CSS.</p>
+        fiz essa página para aprender mais sobre HTML e CSS. -->
       <ul>
         <h2>Lista de coisas que eu gosto bastante</h2>
         {% for Gosto in Gostos %}
